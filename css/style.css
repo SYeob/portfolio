@@ -1,0 +1,552 @@
+/* 전역 변수 및 기본 스타일 */
+:root {
+  --main-color-start: #5571dd;
+  --main-color-end: #a269b7;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --box-bg: #f8f9fa;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  color: var(--text-dark);
+}
+
+/* --- 첫 번째 섹션 (원본 스타일) --- */
+/* 전체 섹션 배경 및 중앙 정렬 */
+.section:nth-child(1) {
+  background: linear-gradient(140deg, #5571dd, #a269b7);
+  color: #fffff3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec1-content {
+  width: 80%;
+  height: 65%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* 좌우 콘텐츠 간격 추가 */
+}
+
+.sec1-content-left {
+  width: 65%;
+  font-size: 31px;
+  font-weight: bold;
+}
+
+.sec1-content-left h1::after {
+  content: "";
+  display: block;
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #fffff3;
+}
+.sec1-content-left h4 {
+  font-size: 36px;
+  font-weight: 600;
+}
+/*이력서*/
+.sec1-button {
+  display: none;
+  width: 15%;
+  height: 50px;
+  margin: 30px 0 0 10px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.sec1-button a.button1 {
+  background: #fffff3;
+  color: rgb(53, 53, 53);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  display: block;
+  height: 55px;
+  line-height: 15px;
+}
+.sec1-button a:hover,
+.sec1-button a.button1:hover {
+  background: #aaaaaad1;
+  color: rgba(249, 249, 249, 0.856);
+}
+.sec1-button iconify-icon {
+  font-size: 42px;
+  margin-top: 4px;
+  color: #000000;
+  cursor: pointer;
+}
+.sec1-button iconify-icon:hover {
+  color: rgb(46, 46, 46);
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.sec1-content-right {
+  width: 360px;
+  height: 75%;
+  background: url("../assets/Memoji.gif") center top no-repeat;
+  background-size: contain;
+  margin-top: 100px;
+  position: inherit;
+}
+
+/* --- 첫 번째 섹션 반응형 (원본 스타일) --- */
+@media screen and (max-width: 975px) {
+  .sec1-content {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin-top: 0;
+  }
+  .sec1-content-left {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+  .sec1-content-left h1::after {
+    margin: 30px auto;
+  }
+  .sec1-content-left h4 {
+    font-size: 24px;
+  }
+  .sec1-button {
+    width: 250px;
+    margin: 20px auto;
+    justify-content: space-around;
+  }
+  .sec1-content-right {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 390px) {
+  .sec1-content-left {
+    font-size: 22px;
+  }
+  .sec1-content-left h4 {
+    font-size: 20px;
+  }
+  .sec1-content-right {
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+  }
+  .sec1-button {
+    width: 200px;
+  }
+}
+/* --- 나머지 섹션 (기존 템플릿 유지) --- */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 홀수 번째 섹션에 그래디언트 적용 */
+.section:nth-child(odd) {
+  background: linear-gradient(
+    140deg,
+    var(--main-color-start),
+    var(--main-color-end)
+  );
+  color: var(--text-light);
+}
+
+/* 짝수 번째 섹션에 다른 각도의 그래디언트 적용 */
+.section:nth-child(even) {
+  background: linear-gradient(
+    400deg,
+    var(--main-color-start),
+    var(--main-color-end)
+  );
+  color: var(--text-light);
+}
+
+/* about-section과 projects-section의 글자색을 어두운 색으로 변경 */
+.about-section,
+.projects-section {
+  color: var(--text-dark);
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 섹션 타이틀 */
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.profile-box,
+.info-box {
+  background-color: var(--box-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+  flex: 1 1 300px;
+  color: var(--text-dark);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  background: url("../assets/권순엽_증명사진.png") center no-repeat #566270;
+  background-position: center top;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.skills-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 200px;
+  min-height: 150px;
+  color: var(--text-light);
+}
+
+.skill-icon {
+  display: inline-block;
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: 500;
+}
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.project-box {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 200px;
+  min-height: 150px;
+  color: var(--text-light);
+  height: 250px;
+}
+
+/* about-section과 projects-section의 글자색을 어두운 색으로 변경 */
+.about-section,
+.projects-section,
+.projects-section .project-box {
+  color: var(--text-dark);
+}
+.bold {
+  font-weight: bold;
+}
+.btn-project {
+  display: inline-block;
+  margin-top: 70px;
+  padding: 10px 20px;
+  background-color: var(--main-color-start);
+  color: var(--text-light);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-project:hover {
+  background-color: var(--main-color-end);
+}
+
+.section-title {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+#high-light {
+  color: #2ad2c9;
+  /* color: #fef01b;*/
+  transition: all 0.5s;
+}
+
+/* --- 첫 번째 섹션 (원본 스타일) --- */
+/* 전체 섹션 배경 및 중앙 정렬 */
+.section:nth-child(1) {
+  background: linear-gradient(140deg, #5571dd, #a269b7);
+  color: #fffff3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec1-content {
+  width: 80%;
+  height: 65%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* 좌우 콘텐츠 간격 추가 */
+}
+
+.sec1-content-left {
+  width: 65%;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.sec1-content-left h1::after {
+  content: "";
+  display: block;
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #fffff3;
+}
+
+.sec1-content-left h4 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.sec1-button {
+  width: 35%;
+  height: 50px;
+  margin: 30px 0 0 10px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sec1-button a.button1 {
+  background: #fffff3;
+  color: rgb(53, 53, 53);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  display: block;
+  height: 55px;
+  line-height: 15px;
+}
+
+.sec1-button a:hover,
+.sec1-button a.button1:hover {
+  background: #aaaaaad1;
+  color: rgba(249, 249, 249, 0.856);
+}
+
+.sec1-button iconify-icon {
+  font-size: 42px;
+  margin-top: 4px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.sec1-button iconify-icon:hover {
+  color: rgb(46, 46, 46);
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.sec1-content-right {
+  width: 400px;
+  height: 75%;
+  background: url("../assets/Memoji.gif") center top no-repeat;
+  background-size: contain;
+  margin-top: 100px;
+  position: inherit;
+}
+
+/* --- 첫 번째 섹션 반응형 (수정된 스타일) --- */
+@media screen and (max-width: 975px) {
+  .sec1-content {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin-top: 0;
+  }
+
+  .sec1-content-left {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .sec1-content-left h1::after {
+    margin: 30px auto;
+  }
+
+  .sec1-content-left h4 {
+    font-size: 24px;
+  }
+
+  .sec1-button {
+    width: 250px;
+    margin: 20px auto;
+    justify-content: space-around;
+  }
+
+  .sec1-content-right {
+    position: static; /* position: absolute 제거 */
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    background-size: contain; /* 이미지 잘림 방지 */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    top: 20px;
+  }
+
+  .content-wrapper {
+    width: 95%;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  /* skills-section */
+  .skills-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* projects-section */
+  .projects-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .sec1-content-left > h1 {
+    font-size: 28px;
+  }
+}
+
+/*프로젝트 쪽*/
+
+/* projects-section의 기본 스타일 */
+.projects-section {
+  position: relative;
+  /* ... 다른 스타일은 유지 */
+}
+
+/* 프로젝트 슬라이더 컨테이너 */
+.projects-slider {
+  width: 90%; /* 슬라이더 전체 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  max-width: 700px;
+}
+
+/* 개별 프로젝트 박스 스타일 (2.jpg와 유사한 디자인) */
+
+.project-box {
+  background-color: var(--box-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px; /* 패딩을 줄여 모바일 화면에 더 잘 맞게 */
+  margin: 0 20px; /* 슬라이드 간 간격 */
+  text-align: left;
+  height: auto; /* 고정된 높이를 제거하고 내용에 따라 높이 자동 조절 */
+  min-height: 250px; /* 최소 높이를 유지하여 디자인 일관성 확보 */
+  display: flex; /* flexbox를 사용해 내부 요소 정렬 */
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .project-box {
+    padding: 20px;
+  }
+}
+.project-box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.project-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Slick.js 기본 화살표 스타일을 2.jpg처럼 변경 */
+
+.slick-next:before {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill="%235571DD" d="M8.59 16.59L13.17 12l-4.58-4.59L10 6l6 6-6 6z"/%3E%3C/svg%3E'); /* 오른쪽 화살표 SVG */
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: -60px; /* 왼쪽 화살표 위치 */
+}
+
+.slick-next {
+  right: -60px; /* 오른쪽 화살표 위치 */
+}
+
+/* 추가: 2.jpg의 이미지 박스 */
+.project-image-box {
+  background-color: #eee;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 30px;
+  /* 추후 프로젝트 이미지 추가 시 여기에 배경 이미지나 <img> 태그 사용 */
+}
+
+.skill-icon:hover {
+  opacity: 0.9;
+  transition: all 0.1s ease-in;
+  background-color: #d4d2e2;
+}
