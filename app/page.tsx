@@ -1,43 +1,5 @@
 import ProjectCarousel from "./ProjectCarousel";
-
-const experiences = [
-  {
-    number: "01",
-    title: "결함 관리 체계화",
-    result: "약 1,100건",
-    text: "이슈 등록부터 원인 추적, 회귀 확인까지 QA 중심의 흐름을 만들고 유관 결함을 연결해 제품 안정화를 지원했습니다.",
-  },
-  {
-    number: "02",
-    title: "인증 품질 개선",
-    result: "결함 60% 감소",
-    text: "GS인증 수정 요청을 분석해 재발 가능성이 높은 영역을 선제 점검하고, 2차 보고서의 결함을 줄였습니다.",
-  },
-  {
-    number: "03",
-    title: "테스트 자동화 환경 구축",
-    result: "반복 검증 자동화",
-    text: "Python과 Selenium으로 로그인, 실시간 경고, 검색, 결과 캡처 등 반복 UI 시나리오를 모듈화했습니다.",
-  },
-  {
-    number: "04",
-    title: "고객 이슈 원인 분석",
-    result: "해결 시간 50% 단축",
-    text: "현상을 전달하는 데 그치지 않고 로그와 바이너리 스펙을 분석해 개발·기술 부서가 원인을 빠르게 좁힐 수 있도록 지원했습니다.",
-  },
-  {
-    number: "05",
-    title: "운영 업무 자동화",
-    result: "데이터 80% 절감",
-    text: "필요한 컬럼만 추출하는 Shell Script를 개발해 122개 컬럼을 21개로 줄이고 반복 업무를 개선했습니다.",
-  },
-  {
-    number: "06",
-    title: "제품 성능 검증",
-    result: "3종 라인 측정",
-    text: "JMeter와 시스템 지표를 활용해 제품 라인별 성능을 측정하고, 부하 조건에서 발생하는 병목과 안정성을 검증했습니다.",
-  },
-];
+import ExperienceCarousel from "./ExperienceCarousel";
 
 const skillGroups = [
   {
@@ -127,23 +89,7 @@ export default function Home() {
 
       <ProjectCarousel />
 
-      <section className="section experience" id="experience">
-        <div className="section-index">03 / EXPERIENCE</div>
-        <div className="section-heading-row">
-          <h2>문제를 찾고, 분석하고,<br />개선해 왔습니다.</h2>
-          <p>맥데이타 · 2023.02 — 2026.07<br />큐아이엠 · 2020.07 — 2021.09<br />Web / System / Infotainment QA</p>
-        </div>
-        <div className="experience-list">
-          {experiences.map((item) => (
-            <article key={item.number}>
-              <span>{item.number}</span>
-              <h3>{item.title}</h3>
-              <strong>{item.result}</strong>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ExperienceCarousel />
 
       <section className="section skills" id="skills">
         <div className="section-index">04 / SKILLS</div>

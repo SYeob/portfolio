@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import CarouselNavigation from "./CarouselNavigation";
 
 const slides = [
   { number: "01", short: "서비스와 품질 위험" },
@@ -190,34 +191,16 @@ export default function ProjectCarousel() {
         </article>
       </div>
 
-      <div className="carousel-edge-controls" aria-hidden="true">
-        <button type="button" onClick={() => moveTo(active - 1)} disabled={active === 0} tabIndex={-1}>
-          <span>←</span><small>PREV</small>
-        </button>
-        <button type="button" onClick={() => moveTo(active + 1)} disabled={active === slides.length - 1} tabIndex={-1}>
-          <small>NEXT</small><span>→</span>
-        </button>
-      </div>
-
-      <div className="carousel-controls" aria-label="프로젝트 슬라이드 이동">
-        <button type="button" onClick={() => moveTo(active - 1)} disabled={active === 0} aria-label="이전 슬라이드">←</button>
-        <div className="carousel-dots">
-          {slides.map((slide, index) => (
-            <button
-              type="button"
-              key={slide.number}
-              className={index === active ? "active" : ""}
-              onClick={() => moveTo(index)}
-              aria-label={`${slide.number} ${slide.short}`}
-              aria-current={index === active ? "true" : undefined}
-            >
-              <strong>{slide.number}</strong>
-              <span>{slide.short}</span>
-            </button>
-          ))}
-        </div>
-        <button type="button" onClick={() => moveTo(active + 1)} disabled={active === slides.length - 1} aria-label="다음 슬라이드">→</button>
-      </div>
+      <CarouselNavigation
+        active={active}
+        slides={slides}
+        onMove={moveTo}
+        variant="dark"
+        nextKicker="NEXT STORY"
+        finalKicker="NEXT SECTION"
+        finalLabel="03 EXPERIENCE"
+        finalHref="#experience"
+      />
     </section>
   );
 }
