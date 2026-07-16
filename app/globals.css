@@ -161,15 +161,20 @@ dt { color: var(--muted); font-size: 13px; } dd { margin: 0; font-weight: 700; }
 .story-next-panel strong { display: block; overflow: hidden; font-size: 18px; text-overflow: ellipsis; white-space: nowrap; }
 .story-arrow { flex: 0 0 48px; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: #fff; animation: story-arrow-nudge 1.1s ease 1.3s 2; }
 .story-arrow svg { width: 27px; height: 27px; fill: none; stroke: var(--blue); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-.story-peek { position: absolute; z-index: 4; top: 128px; right: 0; width: 50px; height: 64%; display: grid; place-items: center; padding: 0; border: 0; color: #9bb5ff; font: inherit; cursor: pointer; writing-mode: vertical-rl; transition: width .2s, background .2s, color .2s; }
+.story-peek { position: absolute; z-index: 4; top: 128px; width: 50px; height: 64%; display: grid; place-items: center; padding: 0; border: 0; color: #9bb5ff; font: inherit; text-decoration: none; cursor: pointer; writing-mode: vertical-rl; transition: width .2s, background .2s, color .2s, box-shadow .2s; }
 .story-peek span { font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+.story-peek.previous { left: 0; writing-mode: vertical-lr; }
+.story-peek.next { right: 0; animation: story-peek-highlight 1s ease-in-out infinite; }
 .story-peek.dark { background: rgba(36,87,214,.20); }
 .story-peek.light { background: rgba(36,87,214,.08); color: var(--blue); }
 .story-peek:hover { width: 62px; background: var(--blue); color: #fff; }
+.story-peek.next:hover { animation-play-state: paused; }
 
 .section-heading-row { display: grid; grid-template-columns: 1.3fr .7fr; gap: 60px; align-items: end; }
 .section-heading-row > p { margin: 0; color: var(--muted); line-height: 1.8; }
-.experience { position: relative; overflow: hidden; }
+.experience { position: relative; overflow: visible; }
+.experience .story-peek.previous { left: calc((100vw - 100%) / -2); }
+.experience .story-peek.next { right: calc((100vw - 100%) / -2); }
 .experience-topbar { display: flex; justify-content: space-between; gap: 40px; align-items: start; }
 .experience-status { display: grid; grid-template-columns: auto auto 1fr; gap: 7px; align-items: baseline; color: var(--muted); font-size: 11px; }
 .experience-status strong { color: var(--ink); font-size: 20px; }
@@ -241,8 +246,16 @@ dt { color: var(--muted); font-size: 13px; } dd { margin: 0; font-weight: 700; }
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(6px); }
 }
+@keyframes story-peek-highlight {
+  0%, 100% { box-shadow: inset 0 0 0 0 rgba(36,87,214,0), 0 0 0 rgba(36,87,214,0); }
+  50% { box-shadow: inset 0 0 0 999px rgba(36,87,214,.28), 0 0 24px rgba(36,87,214,.30); color: #fff; }
+}
 .reveal { animation: rise .65s ease-out both; }
 :focus-visible { outline: 3px solid #7fa2ff; outline-offset: 4px; }
+
+@media (min-width: 901px) {
+  .story-navigation { display: none; }
+}
 
 @media (max-width: 900px) {
   .site-header { width: calc(100% - 40px); height: 76px; }
@@ -259,6 +272,7 @@ dt { color: var(--muted); font-size: 13px; } dd { margin: 0; font-weight: 700; }
   .project { width: 100%; padding-left: 20px; padding-right: 20px; }
   .story-peek { display: none; }
   .story-navigation { grid-template-columns: 1fr; gap: 28px; }
+  .experience .story-navigation { margin-top: 56px; }
   .project-slide { min-height: 0; }
   .project-overview, .project-design, .project-automation { grid-template-columns: 1fr; gap: 38px; }
   .risk-row, .selection-grid, .design-links, .automation-stack { grid-column: auto; }
@@ -315,4 +329,5 @@ dt { color: var(--muted); font-size: 13px; } dd { margin: 0; font-weight: 700; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .compact-flow span, .design-row:not(.header) { background: transparent !important; box-shadow: none !important; }
+  .story-peek.next { animation: none !important; box-shadow: inset 0 0 0 2px rgba(36,87,214,.35); }
 }

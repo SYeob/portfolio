@@ -38,15 +38,34 @@ export default function CarouselNavigation({
 
   return (
     <>
-      {next && (
+      {active > 0 && (
         <button
           type="button"
-          className={`story-peek ${variant}`}
+          className={`story-peek previous ${variant}`}
+          onClick={() => onMove(active - 1)}
+          aria-label={`이전 슬라이드: ${slides[active - 1].short}`}
+        >
+          <span>PREV · {slides[active - 1].number}</span>
+        </button>
+      )}
+
+      {next ? (
+        <button
+          type="button"
+          className={`story-peek next ${variant}`}
           onClick={() => onMove(active + 1)}
           aria-label={`다음 슬라이드: ${next.short}`}
         >
           <span>NEXT · {next.number}</span>
         </button>
+      ) : (
+        <a
+          className={`story-peek next ${variant}`}
+          href={finalHref}
+          aria-label={`다음 섹션: ${finalLabel}`}
+        >
+          <span>NEXT · SECTION</span>
+        </a>
       )}
 
       <div className={`story-navigation ${variant}`}>
