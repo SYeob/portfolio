@@ -5,17 +5,17 @@ const skillGroups = [
   {
     title: "Test Strategy",
     skills: "요구사항 분석 · 위험 기반 테스트 · 테스트 케이스 · 탐색적 테스트",
-    proof: "Pa-Bi QA 문서 6종과 P0 핵심 흐름 설계",
+    proof: "QA 과정 설계, 테스트 전략 수립",
   },
   {
     title: "Automation",
     skills: "Python · Selenium · pytest · requests",
-    proof: "UI/API 회귀 테스트와 Page Object 구조 구현",
+    proof: "UI/API 회귀 테스트 및 자동화 구현",
   },
   {
     title: "CI & Reporting",
-    skills: "GitHub Actions · pytest-html · Git",
-    proof: "자동 회귀 실행, 한국어 보고서, 실패 스크린샷",
+    skills: "GitHub Actions · pytest-html · Git · Jira · Redmine",
+    proof: "CI 환경 구성, 다양한 BTS 툴 경험",
   },
   {
     title: "System QA",
@@ -49,40 +49,68 @@ export default function Home() {
             <br />
             <span>QA 엔지니어 권순엽입니다.</span>
           </h1>
-          <p className="hero-note">
-            제품과 사용자의 관점에서 문제를 정의하고, 검증 가능한 근거로
-            품질을 개선합니다.
-          </p>
+          <p className="hero-note">제품과 사용자의 관점에서 문제를 정의하고, 검증 가능한 근거로 품질을 개선합니다.</p>
           <div className="hero-actions">
-            <a className="button primary" href="#project">포트폴리오 살펴보기</a>
-            <a className="button secondary" href="https://github.com/SYeob" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a className="button primary" href="#project">
+              포트폴리오 살펴보기
+            </a>
+            <a className="button secondary" href="https://github.com/SYeob" target="_blank" rel="noreferrer">
+              GitHub ↗
+            </a>
           </div>
         </div>
         <div className="hero-aside" aria-label="프로필 요약">
           <div className="profile-photo" role="img" aria-label="권순엽 증명사진" />
-          <p>LOCATION</p><span>경기도 성남시</span>
-          <p>EXPERIENCE</p><span>QA 약 5년</span>
-          <p>FOCUS</p><span>Technical QA</span>
+          <p>LOCATION</p>
+          <span>경기도 성남시</span>
+          <p>EXPERIENCE</p>
+          <span>QA 약 5년</span>
+          <p>FOCUS</p>
+          <span>Technical QA</span>
         </div>
-        <a className="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+        <a className="scroll-cue" href="#about">
+          SCROLL TO EXPLORE <span>↓</span>
+        </a>
       </section>
 
       <section className="section about" id="about">
         <div className="section-index">01 / ABOUT</div>
         <div className="about-lead">
-          <h2>결함을 보고하는 데 그치지 않고,<br />발생 원인까지 분석하는 QA</h2>
+          <h2>
+            결함을 보고하는 데 그치지 않고,
+            <br />
+            발생 원인까지 분석하는 QA
+          </h2>
+          <div className="about-principles" aria-label="QA 접근 방식">
+            <span>
+              <b>01</b>요구사항 해석
+            </span>
+            <span>
+              <b>02</b>위험 식별
+            </span>
+            <span>
+              <b>03</b>원인 분석
+            </span>
+          </div>
         </div>
         <div className="about-body">
           <p>
-            웹 UI와 시스템 환경에서 테스트 설계, 결함 분석, 성능 측정,
-            자동화 스크립트 개발을 경험했습니다. 재현 결과만 전달하지 않고
-            로그와 데이터, 동작 조건을 함께 분석해 해결 가능한 정보로 만드는
-            것을 중요하게 생각합니다.
+            웹 UI와 시스템 환경에서 테스트 설계, 결함 분석, 성능 측정, 자동화 스크립트 개발을 경험했습니다. 재현 결과만 전달하지 않고 로그와 데이터, 동작 조건을
+            함께 분석해 해결 가능한 정보로 만드는 것을 중요하게 생각합니다.
           </p>
           <dl>
-            <div><dt>경력</dt><dd>QA 엔지니어 약 5년</dd></div>
-            <div><dt>강점</dt><dd>원인 추적 · 자동화 · 시스템 분석</dd></div>
-            <div><dt>관심 영역</dt><dd>Web · API · Log Analysis · Platform QA</dd></div>
+            <div>
+              <dt>경력</dt>
+              <dd>QA 엔지니어 약 5년</dd>
+            </div>
+            <div>
+              <dt>강점</dt>
+              <dd>원인 추적 · 자동화 · 시스템 분석</dd>
+            </div>
+            <div>
+              <dt>관심 영역</dt>
+              <dd>Web · API · Log Analysis · Platform QA</dd>
+            </div>
           </dl>
         </div>
       </section>
@@ -93,7 +121,11 @@ export default function Home() {
 
       <section className="section skills" id="skills">
         <div className="section-index">04 / SKILLS</div>
-        <h2>테스트부터 분석,<br />자동화까지 함께 사용합니다.</h2>
+        <h2>
+          테스트부터 분석,
+          <br />
+          자동화까지 함께 사용합니다.
+        </h2>
         <div className="skill-list">
           {skillGroups.map((group) => (
             <article key={group.title}>
@@ -107,8 +139,14 @@ export default function Home() {
 
       <footer className="contact" id="contact">
         <p className="eyebrow">CONTACT</p>
-        <h2>더 나은 제품을 만드는 일에<br />함께하고 싶습니다.</h2>
-        <p className="contact-email"><span>Email:</span> tnsduq1324@naver.com</p>
+        <h2>
+          더 나은 제품을 만드는 일에
+          <br />
+          함께하고 싶습니다.
+        </h2>
+        <p className="contact-email">
+          <span>Email:</span> tnsduq1324@naver.com
+        </p>
         <p className="copyright">© 2026 KWEON SOONYEOB</p>
       </footer>
     </main>

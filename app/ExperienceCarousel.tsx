@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CarouselNavigation from "./CarouselNavigation";
 
 const slides = [
@@ -52,6 +52,20 @@ export default function ExperienceCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const passVerticalWheelToPage = (event: WheelEvent) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      window.scrollBy({ top: event.deltaY, left: 0, behavior: "auto" });
+    };
+
+    track.addEventListener("wheel", passVerticalWheelToPage, { passive: false });
+    return () => track.removeEventListener("wheel", passVerticalWheelToPage);
+  }, []);
+
   const moveTo = (index: number) => {
     const next = Math.max(0, Math.min(index, slides.length - 1));
     const track = trackRef.current;
@@ -92,7 +106,6 @@ export default function ExperienceCarousel() {
         <article className="experience-slide experience-overview" aria-label="1. 경력 개요">
           <div className="section-heading-row">
             <h2 id="experience-title">문제를 찾고, 분석하고,<br />개선해 왔습니다.</h2>
-            <p>2개 회사 · QA 약 5년<br />Web · System · Automotive<br />설계 · 분석 · 자동화 · 품질 개선</p>
           </div>
           <div className="experience-list">
             {achievements.map((item) => (
