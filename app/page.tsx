@@ -54,8 +54,8 @@ export default function Home() {
             <a className="button primary" href="#project">
               포트폴리오 살펴보기
             </a>
-            <a className="button secondary" href="https://github.com/SYeob" target="_blank" rel="noreferrer">
-              GitHub ↗
+            <a className="button secondary" href="/portfolio/KWEON_SOONYEOB_QA_RESUME.pdf" download="KWEON_SOONYEOB_QA_RESUME.pdf">
+              이력서 PDF ↓
             </a>
           </div>
         </div>
