@@ -31,7 +31,7 @@ export default function ProjectCarousel() {
   return (
     <section className="section project" id="project" aria-labelledby="project-title">
       <div className="project-topbar">
-        <div className="section-index">02 / FEATURED PROJECT</div>
+        <div className="section-index">02 / 대표 프로젝트</div>
         <div className="carousel-status" aria-live="polite">
           <strong>{slides[active].number}</strong>
           <span>/ 03</span>
@@ -52,7 +52,7 @@ export default function ProjectCarousel() {
       >
         <article className="project-slide project-overview" aria-label="1. 서비스와 품질 위험">
           <div className="slide-heading">
-            <p className="eyebrow">01 · PROJECT CONTEXT</p>
+            <p className="eyebrow">01 · 서비스와 품질 위험</p>
             <h2 id="project-title">
               중고 경매 서비스와
               <br />
@@ -64,7 +64,7 @@ export default function ProjectCarousel() {
             </p>
             <div className="slide-links">
               <a className="project-link primary" href="https://syeob.lovable.app/" target="_blank" rel="noreferrer">
-                Live Demo ↗
+                서비스 보기 ↗
               </a>
               <a
                 className="project-link"
@@ -79,7 +79,7 @@ export default function ProjectCarousel() {
 
           <div className="service-visual">
             <div className="video-frame service-video-frame">
-              <span className="video-badge">LIVE SERVICE · 00:27</span>
+              <span className="video-badge">서비스 시연 · 00:27</span>
               <video
                 className="demo-video"
                 autoPlay
@@ -113,17 +113,17 @@ export default function ProjectCarousel() {
 
           <div className="risk-row">
             <article>
-              <span>RISK 01</span>
+              <span>위험 01</span>
               <strong>입찰 결과 정확성</strong>
               <p>최고 입찰자와 최종 금액이 정확해야 합니다.</p>
             </article>
             <article>
-              <span>RISK 02</span>
+              <span>위험 02</span>
               <strong>낙찰 상태 전달</strong>
               <p>종료 상태와 판매자 연락처가 올바르게 제공되어야 합니다.</p>
             </article>
             <article>
-              <span>RISK 03</span>
+              <span>위험 03</span>
               <strong>개인정보 노출</strong>
               <p>비낙찰자와 비로그인 사용자의 접근을 차단해야 합니다.</p>
             </article>
@@ -132,7 +132,7 @@ export default function ProjectCarousel() {
 
         <article className="project-slide project-design" aria-label="2. 테스트 전략과 설계">
           <div className="slide-heading compact">
-            <p className="eyebrow">02 · TEST DESIGN</p>
+            <p className="eyebrow">02 · 테스트 설계</p>
             <h2>
               위험을 기준으로
               <br />
@@ -169,12 +169,12 @@ export default function ProjectCarousel() {
 
           <div className="selection-grid">
             <article>
-              <span>AUTOMATE</span>
+              <span>자동화 검증</span>
               <h3>반복 가능하고 결과가 명확한 흐름</h3>
               <p>회귀 빈도가 높고 UI 또는 API 응답으로 결과를 판정할 수 있는 기능을 자동화했습니다.</p>
             </article>
             <article>
-              <span>MANUAL</span>
+              <span>수동 검증</span>
               <h3>판단과 보안 관점이 필요한 검증</h3>
               <p>정책 판단, 탐색적 테스트와 민감정보 확인처럼 사람의 해석이 필요한 영역은 수동으로 남겼습니다.</p>
             </article>
@@ -206,7 +206,7 @@ export default function ProjectCarousel() {
         <article className="project-slide project-automation" aria-label="3. 자동화와 검증 결과">
           <div className="automation-copy">
             <div className="slide-heading compact">
-              <p className="eyebrow">03 · AUTOMATION & RESULT</p>
+              <p className="eyebrow">03 · 자동화와 검증 결과</p>
               <h2>
                 설계한 검증을
                 <br />
@@ -245,7 +245,7 @@ export default function ProjectCarousel() {
           </div>
 
           <div className="video-frame">
-            <span className="video-badge">LIVE REGRESSION · 00:12</span>
+            <span className="video-badge">회귀 테스트 · 00:12</span>
             <video
               className="demo-video"
               autoPlay
@@ -271,11 +271,40 @@ export default function ProjectCarousel() {
         slides={slides}
         onMove={moveTo}
         variant="dark"
-        nextKicker="NEXT STORY"
-        finalKicker="NEXT SECTION"
-        finalLabel="03 EXPERIENCE"
-        finalHref="#experience"
+        nextKicker="다음 이야기"
+        finalKicker="다음 섹션"
+        finalLabel="보조 프로젝트 · LH 공고 알림"
+        finalHref="#lh-project"
       />
+      <article className="support-project" id="lh-project" aria-labelledby="lh-title">
+        <div>
+          <p className="eyebrow">보조 프로젝트 · 생활 속 자동화</p>
+          <h3 id="lh-title">LH 임대 공고 알림</h3>
+          <p>LH 임대주택 공고를 매번 직접 확인하는 일이 번거로웠습니다. 필요한 공고가 올라오면 알림을 받을 수 있도록 Codex를 활용해 확인 과정을 자동화했습니다. 현재는 경기도 신규 공고를 Telegram으로 받을 수 있도록 구현했습니다.</p>
+          <p className="support-stack">Python · requests · SQLite · pytest · Telegram API</p>
+          <div className="slide-links">
+            <a className="project-link" href="https://github.com/SYeob/LH-Notice-Alert" target="_blank" rel="noreferrer">GitHub 저장소 ↗</a>
+            <a className="project-link" href="https://github.com/SYeob/LH-Notice-Alert/blob/main/docs/verification.md" target="_blank" rel="noreferrer">검증 기록 ↗</a>
+          </div>
+        </div>
+        <div className="support-media">
+          <figure className="support-demo">
+            <video
+              controls
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/portfolio/lh-notice-poster.jpg"
+              aria-label="LH 공고 알림 테스트 보고서와 Telegram 알림 시연 영상"
+            >
+              <source src="/portfolio/lh-notice-demo.mp4" type="video/mp4" />
+              브라우저가 MP4 영상을 지원하지 않습니다.
+            </video>
+            <figcaption>LH 공고 알림 · 테스트 보고서 및 Telegram 알림 시연</figcaption>
+          </figure>
+        </div>
+      </article>
     </section>
   );
 }

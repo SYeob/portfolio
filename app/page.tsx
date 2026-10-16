@@ -3,22 +3,22 @@ import ExperienceCarousel from "./ExperienceCarousel";
 
 const skillGroups = [
   {
-    title: "Test Strategy",
+    title: "테스트 전략",
     skills: "요구사항 분석 · 위험 기반 테스트 · 테스트 케이스 · 탐색적 테스트",
     proof: "QA 과정 설계, 테스트 전략 수립",
   },
   {
-    title: "Automation",
+    title: "테스트 자동화",
     skills: "Python · Selenium · pytest · requests",
     proof: "UI/API 회귀 테스트 및 자동화 구현",
   },
   {
-    title: "CI & Reporting",
+    title: "CI 및 결과 관리",
     skills: "GitHub Actions · pytest-html · Git · Jira · Redmine",
     proof: "CI 환경 구성, 다양한 BTS 툴 경험",
   },
   {
-    title: "System QA",
+    title: "시스템 검증",
     skills: "Linux · Shell Script · JMeter · Wireshark",
     proof: "제품 성능 측정, 패킷 분석, 배포·운영 자동화",
   },
@@ -32,16 +32,18 @@ export default function Home() {
           KWEON SOONYEOB
         </a>
         <nav aria-label="주요 메뉴">
-          <a href="#about">ABOUT</a>
-          <a href="#project">PROJECT</a>
-          <a href="#experience">EXPERIENCE</a>
-          <a href="#contact">CONTACT</a>
+          <a href="#about">소개</a>
+          <a href="#project">프로젝트</a>
+          <a href="#experience">경력</a>
+          <a href="#skills">기술 역량</a>
+          <a href="#personal">업무 밖의 저</a>
+          <a href="#contact">연락처</a>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy reveal">
-          <p className="eyebrow">QA ENGINEER</p>
+          <p className="eyebrow">QA 엔지니어</p>
           <h1>
             재현에서 멈추지 않고
             <br />
@@ -61,20 +63,20 @@ export default function Home() {
         </div>
         <div className="hero-aside" aria-label="프로필 요약">
           <div className="profile-photo" role="img" aria-label="권순엽 증명사진" />
-          <p>LOCATION</p>
+          <p>거주 지역</p>
           <span>경기도 성남시</span>
-          <p>EXPERIENCE</p>
+          <p>경력</p>
           <span>QA 약 5년</span>
-          <p>FOCUS</p>
+          <p>전문 분야</p>
           <span>Technical QA</span>
         </div>
         <a className="scroll-cue" href="#about">
-          SCROLL TO EXPLORE <span>↓</span>
+          아래로 살펴보기 <span>↓</span>
         </a>
       </section>
 
       <section className="section about" id="about">
-        <div className="section-index">01 / ABOUT</div>
+        <div className="section-index">01 / 소개</div>
         <div className="about-lead">
           <h2>
             결함을 보고하는 데 그치지 않고,
@@ -120,7 +122,7 @@ export default function Home() {
       <ExperienceCarousel />
 
       <section className="section skills" id="skills">
-        <div className="section-index">04 / SKILLS</div>
+        <div className="section-index">04 / 기술 역량</div>
         <h2>
           테스트부터 분석,
           <br />
@@ -137,15 +139,50 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section personal" id="personal" aria-labelledby="personal-title">
+        <div className="section-index">05 / 업무 밖의 저</div>
+        <div className="section-heading-row">
+          <h2 id="personal-title">필요한 것은 만들어 보고,<br />좋아하는 것은 기록합니다.</h2>
+        </div>
+        <div className="personal-grid">
+          <article>
+            <p className="eyebrow">01 · IT와 자동화</p>
+            <h3>AI를 통해 관심 있는 기술을 살펴보고, 블로그에 정리합니다.</h3>
+            <p>관심 있는 IT 소식을 매번 찾아보고 정리하는 일을 줄이고 싶었습니다. AI의 도움으로 자료 조사와 초안 작성을 자동화하고, 내용을 검토해 블로그에 올리고 있습니다.</p>
+            <p>직접 사이트에 들어가 확인하는 대신, 필요한 소식을 받아볼 수 있도록 Codex를 활용했습니다.</p>
+            <div className="slide-links">
+              <a className="button secondary" href="https://syeob.wordpress.com/" target="_blank" rel="noreferrer">블로그 보기 ↗</a>
+              <a className="button secondary" href="https://github.com/SYeob/blog-automation" target="_blank" rel="noreferrer">블로그 자동화 코드 ↗</a>
+            </div>
+          </article>
+          <article>
+            <p className="eyebrow">02 · 노래와 기록</p>
+            <h3>좋아하는 노래를 부르고, <br />기록합니다.</h3>
+            <p>평소 노래 부르는 것을 좋아합니다. 마음에 드는 곡을 부르고, 그중 남겨두고 싶은 순간을 인스타그램에 올리고 있습니다.</p>
+            <div className="slide-links">
+              <a className="button secondary" href="https://www.instagram.com/conoyeob/" target="_blank" rel="noreferrer">노래 듣기 ↗</a>
+            </div>
+          </article>
+          <article>
+            <p className="eyebrow">03 · 여행과 편집</p>
+            <h3>여행 다니는 것을 좋아하고, <br />영상으로 간직합니다.</h3>
+            <p>친구들과 여행을 다니며 즐거웠던 순간들을 촬영합니다. 다녀온 뒤에는 영상을 편집해, 함께 웃었던 시간을 다시 꺼내 볼 수 있도록 남겨두고 있습니다.</p>
+            <div className="slide-links">
+              <a className="button secondary" href="https://syeob.github.io/muma-trip/" target="_blank" rel="noreferrer">여행 영상 보기 ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <footer className="contact" id="contact">
-        <p className="eyebrow">CONTACT</p>
+        <p className="eyebrow">06 / 연락처</p>
         <h2>
           더 나은 제품을 만드는 일에
           <br />
           함께하고 싶습니다.
         </h2>
         <p className="contact-email">
-          <span>Email:</span> tnsduq1324@naver.com
+          <span>이메일:</span> tnsduq1324@naver.com
         </p>
         <p className="copyright">© 2026 KWEON SOONYEOB</p>
       </footer>
