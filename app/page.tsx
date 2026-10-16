@@ -143,14 +143,14 @@ export default function Home() {
         <div className="section-index">05 / 업무 밖의 저</div>
         <div className="section-heading-row">
           <h2 id="personal-title">필요한 것은 만들어 보고,<br />좋아하는 것은 기록합니다.</h2>
-          <p>일상에서 반복되는 일을 줄이는 방법을 찾고, 관심 있는 기술을 직접 써봅니다. 노래를 녹음하고 공유하는 시간도 즐깁니다.</p>
+          <p>AI로 일상의 반복 작업을 줄이고, 좋아하는 노래를 부릅니다. 친구들과 떠난 여행은 영상으로 남깁니다.</p>
         </div>
         <div className="personal-grid">
           <article>
             <p className="eyebrow">01 · IT와 자동화</p>
-            <h3>관심 있는 기술을 살펴보고,<br />블로그에 정리합니다.</h3>
-            <p>IT 블로그를 운영하며 관심 있는 기술과 기기를 다룹니다. 조사·작성·발행 과정에는 AI와 자동화 도구를 활용하고, 원고를 검토한 뒤 발행하는 흐름을 만들었습니다.</p>
-            <p>필요한 정보를 반복해서 확인하는 일도 자동화해 봅니다. LH 공고 알림처럼 생활 속 필요에서 시작한 작은 프로그램을 만듭니다.</p>
+            <h3>AI를 통해 관심 있는 기술을 살펴보고,<br />블로그에 정리합니다.</h3>
+            <p>관심 있는 IT 소식을 매번 찾아보고 정리하는 일을 줄이고 싶었습니다. AI의 도움으로 자료 조사와 초안 작성을 자동화하고, 내용을 검토해 블로그에 올립니다.</p>
+            <p>LH 공고 알림도 같은 이유로 시작했습니다. 직접 사이트에 들어가 확인하는 대신, 필요한 소식을 받아볼 수 있도록 Codex를 활용했습니다.</p>
             <div className="slide-links">
               <a className="button secondary" href="https://syeob.wordpress.com/" target="_blank" rel="noreferrer">블로그 보기 ↗</a>
               <a className="button secondary" href="https://github.com/SYeob/blog-automation" target="_blank" rel="noreferrer">블로그 자동화 코드 ↗</a>
@@ -158,10 +158,18 @@ export default function Home() {
           </article>
           <article>
             <p className="eyebrow">02 · 노래와 기록</p>
-            <h3>좋아하는 노래를 부르고,<br />녹음해서 공유합니다.</h3>
-            <p>노래를 부르고 녹음하는 것이 취미입니다. 부르고 싶은 곡을 골라 제 목소리로 담고, 인스타그램에 올리며 기록하고 있습니다.</p>
+            <h3>좋아하는 노래를<br />제 목소리로 불러봅니다.</h3>
+            <p>평소 노래 부르는 것을 좋아합니다. 마음에 드는 곡을 부르고, 그중 남겨두고 싶은 순간을 인스타그램에 올립니다.</p>
             <div className="slide-links">
               <a className="button secondary" href="https://www.instagram.com/conoyeob/" target="_blank" rel="noreferrer">노래 듣기 ↗</a>
+            </div>
+          </article>
+          <article>
+            <p className="eyebrow">03 · 여행과 편집</p>
+            <h3>친구들과 떠난 여행을<br />영상으로 간직합니다.</h3>
+            <p>친구들과 여행을 다니며 즐거웠던 순간들을 촬영합니다. 다녀온 뒤에는 영상을 편집해, 함께 웃었던 시간을 다시 꺼내 볼 수 있도록 남겨둡니다.</p>
+            <div className="slide-links">
+              <a className="button secondary" href="https://syeob.github.io/muma-trip/" target="_blank" rel="noreferrer">여행 영상 보기 ↗</a>
             </div>
           </article>
         </div>

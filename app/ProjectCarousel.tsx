@@ -280,7 +280,7 @@ export default function ProjectCarousel() {
         <div>
           <p className="eyebrow">보조 프로젝트 · 생활 속 자동화</p>
           <h3 id="lh-title">LH 임대 공고 알림</h3>
-          <p>경기도 임대주택 공고를 매번 직접 확인하는 일을 줄이기 위해 만들었습니다. 신규 공고를 수집하고, 지역을 확인해 Telegram으로 알립니다.</p>
+          <p>LH 임대주택 공고를 매번 직접 확인하는 일이 번거로웠습니다. 필요한 공고가 올라오면 알림을 받을 수 있도록 Codex를 활용해 확인 과정을 자동화했습니다. 현재는 경기도 신규 공고를 Telegram으로 받아봅니다.</p>
           <p className="support-stack">Python · requests · SQLite · pytest · Telegram API</p>
           <div className="slide-links">
             <a className="project-link" href="https://github.com/SYeob/LH-Notice-Alert" target="_blank" rel="noreferrer">GitHub 저장소 ↗</a>
@@ -288,13 +288,23 @@ export default function ProjectCarousel() {
           </div>
         </div>
         <div className="support-details">
-          <h4>실패 상황까지 구분하는 자동화</h4>
-          <ul>
-            <li>정상적인 빈 목록과 수집 실패를 구분</li>
-            <li>전체 페이지 수집이 끝난 뒤 데이터를 저장</li>
-            <li>재시작 후 처리 이력을 유지하고 발송 실패를 재처리</li>
-          </ul>
-          <p>구현 및 초기 검증 완료 · 장기 운영 검증은 남아 있습니다. 발송 응답 유실 시 알림 중복 가능성은 있습니다.</p>
+          <div className="support-details-copy">
+            <h4>실패 상황까지 구분하는 자동화</h4>
+            <ul>
+              <li>정상적인 빈 목록과 수집 실패를 구분</li>
+              <li>전체 페이지 수집이 끝난 뒤 데이터를 저장</li>
+              <li>재시작 후 처리 이력을 유지하고 발송 실패를 재처리</li>
+            </ul>
+            <p>구현 및 초기 검증 완료 · 장기 운영 검증은 남아 있습니다. 발송 응답 유실 시 알림 중복 가능성은 있습니다.</p>
+          </div>
+          <figure className="support-demo">
+            {/* 실제 시연 자료를 받으면 이 영역을 img 또는 controls가 있는 video로 교체합니다. */}
+            <div className="support-demo-placeholder">
+              <span aria-hidden="true">▷</span>
+              <p>시연 자료 준비 중</p>
+            </div>
+            <figcaption>LH 공고 확인부터 Telegram 알림까지</figcaption>
+          </figure>
         </div>
       </article>
     </section>
