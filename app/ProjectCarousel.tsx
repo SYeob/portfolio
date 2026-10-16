@@ -287,16 +287,7 @@ export default function ProjectCarousel() {
             <a className="project-link" href="https://github.com/SYeob/LH-Notice-Alert/blob/main/docs/verification.md" target="_blank" rel="noreferrer">검증 기록 ↗</a>
           </div>
         </div>
-        <div className="support-details">
-          <div className="support-details-copy">
-            <h4>실패 상황까지 구분하는 자동화</h4>
-            <ul>
-              <li>정상적인 빈 목록과 수집 실패를 구분</li>
-              <li>전체 페이지 수집이 끝난 뒤 데이터를 저장</li>
-              <li>재시작 후 처리 이력을 유지하고 발송 실패를 재처리</li>
-            </ul>
-            <p>구현 및 초기 검증 완료 · 장기 운영 검증은 남아 있습니다. 발송 응답 유실 시 알림 중복 가능성은 있습니다.</p>
-          </div>
+        <div className="support-media">
           <figure className="support-demo">
             {/* 실제 시연 자료를 받으면 이 영역을 img 또는 controls가 있는 video로 교체합니다. */}
             <div className="support-demo-placeholder">
