@@ -1573,6 +1573,27 @@ dd {
 .support-project .support-stack {
   font-size: 12px;
 }
+.support-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  align-self: center;
+  padding: 28px;
+  border: 1px solid #45433f;
+}
+.support-details h4 {
+  margin: 0 0 18px;
+  font-size: 17px;
+}
+.support-details ul {
+  padding-left: 20px;
+  margin: 0 0 20px;
+}
+.support-details-copy > p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
 .personal-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
