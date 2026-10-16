@@ -280,7 +280,7 @@ export default function ProjectCarousel() {
         <div>
           <p className="eyebrow">보조 프로젝트 · 생활 속 자동화</p>
           <h3 id="lh-title">LH 임대 공고 알림</h3>
-          <p>LH 임대주택 공고를 매번 직접 확인하는 일이 번거로웠습니다. 필요한 공고가 올라오면 알림을 받을 수 있도록 Codex를 활용해 확인 과정을 자동화했습니다. 현재는 경기도 신규 공고를 Telegram으로 받아봅니다.</p>
+          <p>LH 임대주택 공고를 매번 직접 확인하는 일이 번거로웠습니다. 필요한 공고가 올라오면 알림을 받을 수 있도록 Codex를 활용해 확인 과정을 자동화했습니다. 현재는 경기도 신규 공고를 Telegram으로 받을 수 있도록 구현했습니다.</p>
           <p className="support-stack">Python · requests · SQLite · pytest · Telegram API</p>
           <div className="slide-links">
             <a className="project-link" href="https://github.com/SYeob/LH-Notice-Alert" target="_blank" rel="noreferrer">GitHub 저장소 ↗</a>
