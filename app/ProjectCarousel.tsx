@@ -289,12 +289,19 @@ export default function ProjectCarousel() {
         </div>
         <div className="support-media">
           <figure className="support-demo">
-            {/* 실제 시연 자료를 받으면 이 영역을 img 또는 controls가 있는 video로 교체합니다. */}
-            <div className="support-demo-placeholder">
-              <span aria-hidden="true">▷</span>
-              <p>시연 자료 준비 중</p>
-            </div>
-            <figcaption>LH 공고 확인부터 Telegram 알림까지</figcaption>
+            <video
+              controls
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/portfolio/lh-notice-poster.jpg"
+              aria-label="LH 공고 알림 테스트 보고서와 Telegram 알림 시연 영상"
+            >
+              <source src="/portfolio/lh-notice-demo.mp4" type="video/mp4" />
+              브라우저가 MP4 영상을 지원하지 않습니다.
+            </video>
+            <figcaption>LH 공고 알림 · 테스트 보고서 및 Telegram 알림 시연</figcaption>
           </figure>
         </div>
       </article>
