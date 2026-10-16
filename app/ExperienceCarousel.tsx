@@ -84,7 +84,7 @@ export default function ExperienceCarousel() {
   return (
     <section className="section experience" id="experience" aria-labelledby="experience-title">
       <div className="experience-topbar">
-        <div className="section-index">03 / EXPERIENCE</div>
+        <div className="section-index">03 / 경력</div>
         <div className="experience-status" aria-live="polite">
           <strong>{slides[active].number}</strong>
           <span>/ 03</span>
@@ -121,7 +121,7 @@ export default function ExperienceCarousel() {
 
         <article className="experience-slide career-slide" aria-label="2. 맥데이타 경력">
           <div className="career-summary">
-            <p className="eyebrow">02 · COMPANY EXPERIENCE</p>
+            <p className="eyebrow">02 · 회사별 경력</p>
             <h2>맥데이타</h2>
             <p className="career-period">2023.02 — 2026.07</p>
             <dl className="career-meta">
@@ -148,12 +148,12 @@ export default function ExperienceCarousel() {
             </div>
           </div>
 
-          <p className="career-tools"><span>TOOLS</span> Linux · Shell Script · Python · Selenium · Redmine</p>
+          <p className="career-tools"><span>사용 도구</span> Linux · Shell Script · Python · Selenium · Redmine</p>
         </article>
 
         <article className="experience-slide career-slide" aria-label="3. 큐아이엠 경력">
           <div className="career-summary">
-            <p className="eyebrow">03 · COMPANY EXPERIENCE</p>
+            <p className="eyebrow">03 · 회사별 경력</p>
             <h2>큐아이엠</h2>
             <p className="career-period">2020.07 — 2021.09</p>
             <dl className="career-meta">
@@ -180,7 +180,7 @@ export default function ExperienceCarousel() {
             </div>
           </div>
 
-          <p className="career-tools"><span>TOOLS</span> Vector CANoe · JIRA · Confluence · MS Office</p>
+          <p className="career-tools"><span>사용 도구</span> Vector CANoe · JIRA · Confluence · MS Office</p>
         </article>
       </div>
 
@@ -189,9 +189,9 @@ export default function ExperienceCarousel() {
         slides={slides}
         onMove={moveTo}
         variant="light"
-        nextKicker="NEXT CAREER"
-        finalKicker="NEXT SECTION"
-        finalLabel="04 SKILLS"
+        nextKicker="다음 경력"
+        finalKicker="다음 섹션"
+        finalLabel="04 기술 역량"
         finalHref="#skills"
       />
     </section>

@@ -45,7 +45,7 @@ export default function CarouselNavigation({
           onClick={() => onMove(active - 1)}
           aria-label={`이전 슬라이드: ${slides[active - 1].short}`}
         >
-          <span>PREV · {slides[active - 1].number}</span>
+          <span>이전 · {slides[active - 1].number}</span>
         </button>
       )}
 
@@ -56,7 +56,7 @@ export default function CarouselNavigation({
           onClick={() => onMove(active + 1)}
           aria-label={`다음 슬라이드: ${next.short}`}
         >
-          <span>NEXT · {next.number}</span>
+          <span>다음 · {next.number}</span>
         </button>
       ) : (
         <a
@@ -64,7 +64,7 @@ export default function CarouselNavigation({
           href={finalHref}
           aria-label={`다음 섹션: ${finalLabel}`}
         >
-          <span>NEXT · SECTION</span>
+          <span>다음 섹션</span>
         </a>
       )}
 

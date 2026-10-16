@@ -8,8 +8,8 @@ test("exports the portfolio under the repository base path", async () => {
   assert.match(html, /QA Engineer Portfolio/);
   assert.match(html, /\/portfolio\/_next\//);
   assert.match(html, /\/portfolio\/pabi-service-demo\.mp4/);
-  assert.match(html, /Email:<\/span> tnsduq1324@naver\.com/);
-  assert.match(html, /NEXT STORY/);
+  assert.match(html, /이메일:<\/span> tnsduq1324@naver\.com/);
+  assert.match(html, /다음 이야기/);
   assert.match(html, /맥데이타/);
   assert.match(html, /큐아이엠/);
   assert.match(html, /약 4,000건/);
@@ -18,6 +18,6 @@ test("exports the portfolio under the repository base path", async () => {
 test("keeps the revised contact palette and removes the experience divider", async () => {
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
-  assert.match(css, /\.experience \+ \.skills \{ border-top: 0; \}/);
-  assert.match(css, /\.contact \{ background: #ebe6dc;/);
+  assert.match(css, /\.experience \+ \.skills\s*\{\s*border-top: 0;\s*\}/);
+  assert.match(css, /\.contact\s*\{\s*background: #ebe6dc;/);
 });
