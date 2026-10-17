@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import CarouselNavigation from "./CarouselNavigation";
 
 const slides = [
@@ -51,20 +51,6 @@ const achievements = [
 export default function ExperienceCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const passVerticalWheelToPage = (event: WheelEvent) => {
-      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-      event.preventDefault();
-      window.scrollBy({ top: event.deltaY, left: 0, behavior: "auto" });
-    };
-
-    track.addEventListener("wheel", passVerticalWheelToPage, { passive: false });
-    return () => track.removeEventListener("wheel", passVerticalWheelToPage);
-  }, []);
 
   const moveTo = (index: number) => {
     const next = Math.max(0, Math.min(index, slides.length - 1));

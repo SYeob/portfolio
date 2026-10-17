@@ -190,9 +190,10 @@ nav a:focus-visible::after {
 .section-index {
   margin-bottom: 76px;
   color: var(--blue);
-  font-size: 12px;
+  font-size: 18px;
+  line-height: 1.5;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
 }
 .section h2,
 .contact h2 {
@@ -1307,6 +1308,7 @@ dd {
   }
   .section-index {
     margin-bottom: 50px;
+    font-size: 16px;
   }
   .about,
   .section-heading-row {
@@ -1412,9 +1414,6 @@ dd {
   .project-topbar {
     align-items: baseline;
   }
-  .project-topbar .section-index {
-    font-size: 10px;
-  }
   .carousel-status p {
     display: none;
   }
@@ -1465,9 +1464,6 @@ dd {
   }
   .experience-topbar {
     align-items: baseline;
-  }
-  .experience-topbar .section-index {
-    font-size: 10px;
   }
   .experience-status p {
     display: none;
