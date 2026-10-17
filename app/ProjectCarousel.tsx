@@ -290,6 +290,7 @@ export default function ProjectCarousel() {
         <div className="support-media">
           <figure className="support-demo">
             <video
+              autoPlay
               controls
               muted
               loop
