@@ -12,9 +12,9 @@ const slides = [
 const achievements = [
   {
     number: "01",
-    title: "테스트 커버리지 확대",
-    result: "약 4,000건",
-    text: "사양과 위험을 기준으로 테스트 케이스를 기존 1,500건에서 약 4,000건까지 확장해 검증 범위와 추적성을 높였습니다.",
+    title: "제품군별 테스트 케이스 관리",
+    result: "메인 제품 약 1,500건",
+    text: "메인 제품의 회귀 테스트 케이스 약 1,500건을 관리하고, 파생 제품의 테스트 케이스는 제품군별로 분리해 관리했습니다.",
   },
   {
     number: "02",
@@ -120,7 +120,7 @@ export default function ExperienceCarousel() {
           <div className="career-work-card">
             <p className="eyebrow">주요 업무</p>
             <div><span>01</span><h3>품질 인증과 사전 분석</h3><p>과거 사례와 시나리오를 분석해 잠재 결함을 식별하고 GS인증 1급 취득을 지원했습니다.</p></div>
-            <div><span>02</span><h3>테스트 커버리지 확대</h3><p>요구사항과 위험을 기준으로 테스트 케이스를 1,500건에서 약 4,000건까지 확장했습니다.</p></div>
+            <div><span>02</span><h3>제품군별 테스트 케이스 관리</h3><p>메인 제품의 회귀 테스트 케이스 약 1,500건을 관리하고, 파생 제품의 테스트 케이스는 제품군별로 분리해 관리했습니다.</p></div>
             <div><span>03</span><h3>자동화와 운영 개선</h3><p>Python·Selenium UI 자동화와 Shell Script를 개발하고 결함·패키징·버전 배포를 관리했습니다.</p></div>
           </div>
 
@@ -128,7 +128,7 @@ export default function ExperienceCarousel() {
             <p className="eyebrow">성과</p>
             <div className="impact-grid">
               <article><strong>60% 감소</strong><span>GS인증 결함 50건에서 19건</span></article>
-              <article><strong>약 4,000건</strong><span>테스트 케이스 확장</span></article>
+              <article><strong>약 1,500건</strong><span>메인 제품 회귀 테스트 케이스</span></article>
               <article><strong>80% 절감</strong><span>데이터 추출 용량</span></article>
               <article><strong>50% 단축</strong><span>고객 대응 작업 시간</span></article>
             </div>

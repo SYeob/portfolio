@@ -12,7 +12,7 @@ test("exports the portfolio under the repository base path", async () => {
   assert.match(html, /다음 이야기/);
   assert.match(html, /맥데이타/);
   assert.match(html, /큐아이엠/);
-  assert.match(html, /약 4,000건/);
+  assert.match(html, /메인 제품 약 1,500건/);
 });
 
 test("keeps the revised contact palette and removes the experience divider", async () => {
